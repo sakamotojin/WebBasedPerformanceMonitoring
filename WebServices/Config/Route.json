@@ -1,0 +1,8 @@
+{
+  "/task/AddTask" : ["POST","self.controller.addNewTask"],
+  "/task/ShowTasks" : ["POST","self.controller.getAllTasks"],
+  "/task/UpdateTask" : ["POST","self.controller.UpdateTask"],
+  "/task/DeleteTask" : ["POST","self.controller.DeleteTask"],
+  "/task/Task" : ["POST", "self.controller.getTaskDetails"],
+  "/task/TaskStatus" : ["POST", "self.controller.getTasksStatus"]
+}

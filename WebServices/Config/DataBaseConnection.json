@@ -1,0 +1,9 @@
+{
+  "eBAMServer" :  "tcp:fr0-viaas-089\\INWP2A2401,10010",
+  "coresalrServer": "tcp:coresalr, 10001",
+  "eBAM_A350" : "DBWP2A2401",
+  "eBAM_A380" : "DBWP2A2402",
+  "eBAM_A320" : "DBWP2A2403",
+  "eBAM_A330" : "DBWP2A2404",
+  "CustomizableCockpit"   : "DBWP2A2407"
+}
