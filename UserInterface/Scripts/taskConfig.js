@@ -112,17 +112,7 @@ function chckboxchange() {
         one.disabled = true;
     } else {
         one.disabled = false;
-        // var newLine = document.createElement('br');
-        // var lab3 = document.createElement("label");
-        // var ff = document.getElementById("fp");
-        // lab3.setAttribute("id","lablint");
-        // lab3.innerText = `Enter the interval of running the task ? :`;
-        // var interval_dur = document.createElement("input");
-        // interval_dur.setAttribute('type',"number");
-        // interval_dur.setAttribute("id","interv");
-        // ff.appendChild(lab3);
-        // ff.appendChild(interval_dur);
-        // document.getElementsByTagName('body')[0].appendChild(ff);
+
     }
 }
 
@@ -133,19 +123,12 @@ function addtask(mytasksel) {
     }
     var ff = document.createElement("form");
     ff.setAttribute("id", "fp");
-    var lab = document.createElement("label");
-    lab.setAttribute("for", "did");
-    lab.setAttribute("style", "font-size:medium");
-    lab.innerText = `Enter the dashboard id?:`;
-    var inp = document.createElement("input");
-    inp.setAttribute("type", "number");
-    inp.setAttribute("id", "did");
-    inp.setAttribute("required", "");
+
 
     var lab1 = document.createElement("label");
     lab1.setAttribute("for", "durl");
     lab1.setAttribute("style", "font-size:medium");
-    lab1.innerText = `Enter the dashboard URL correctly?:`;
+    lab1.innerText = `Enter the Website URL correctly?:`;
     var inpurl = document.createElement("input");
     inpurl.setAttribute("type", "text");
     inpurl.setAttribute("id", "durl");
@@ -195,11 +178,9 @@ function addtask(mytasksel) {
     btn.setAttribute("onclick", 'sendreq("' + mytasksel + '")');
 
     var n1 = document.createElement("br");
-    var n2 = document.createElement("br");
     var n3 = document.createElement("br");
     var n4 = document.createElement("br");
     var n5 = document.createElement("br");
-    var n6 = document.createElement("br");
     var n7 = document.createElement("br");
     var n8 = document.createElement("br");
     var n9 = document.createElement("br");
@@ -207,10 +188,6 @@ function addtask(mytasksel) {
     var n11 = document.createElement("br");
     var n12 = document.createElement("br");
     ff.appendChild(n1);
-    ff.appendChild(lab);
-    ff.appendChild(inp);
-    ff.appendChild(n2);
-    ff.appendChild(n6);
     ff.appendChild(lab1);
     ff.appendChild(inpurl);
     ff.appendChild(n3);
@@ -274,8 +251,8 @@ function deletetask(mytasksel) {
 
 function taskaction() {
     let task_sel = document.getElementById("task_inp").value;
-    if (task_sel == "Dashboard Performance Testing") {
-        let tsk = "DashboardTest";
+    if (task_sel == "Website Performance Testing") {
+        let tsk = "WebsitePerformanceTest";
         let option_sel = document.getElementById("choice_inp").value;
         if (option_sel == "Add a task to perform") {
             addtask(tsk);

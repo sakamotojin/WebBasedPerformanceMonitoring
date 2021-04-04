@@ -26,7 +26,6 @@ class Controller:
             self.TaskScheduler.start()
 
 
-
     def getTaskDetails(self):
         print('GET TASK DETAILS')
         try:

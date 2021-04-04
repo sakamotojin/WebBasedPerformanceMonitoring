@@ -1,6 +1,6 @@
 const express = require('express');
 var app = express();
-var testDashboard = require('./Dashboard.js').testDashboard;
+var testURL = require('./TestURL').testDashboard;
 
 app.use(express.urlencoded());
 app.use(express.json());
@@ -13,7 +13,6 @@ function onServerListening() {
 /*
     Requests
     {
-        "DashboardId" : "",
         "Timeout" : "",
         "URL" : "",
         "ScreenShot" : "Path" 
@@ -25,16 +24,15 @@ function onServerListening() {
 
     }
 */
-app.post('/testDashboard', async function (req, res) {
+app.post('/testURL', async function (req, res) {
 
    
     console.log(req.body);
-    let dashboardId = req.body['dashboardId'];
     let TimeOut = req.body['TimeOut'];
     let URL = req.body['URL'];
 
-    console.log(dashboardId, TimeOut, URL);
-    let resp = await testDashboard(dashboardId, TimeOut , URL);
+    console.log(TimeOut, URL);
+    let resp = await testURL(TimeOut , URL);
     res.send(resp);
 });
 

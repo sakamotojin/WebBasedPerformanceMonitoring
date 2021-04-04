@@ -3,13 +3,12 @@ from WebServices.APIHelper.APIHelper import APIHelper
 import time
 
 
-class DashboardTest(Task):
+class WebSitePerformanceTest(Task):
 
     def Init(self):
         self.Error = False
 
     def Run(self):
-        print('Dashboard Task Run', self.TaskData["DashboardId"], self.TaskData["TimeOut"])
         Response = APIHelper.RenderDashboard(self.TaskData["DashboardId"], self.TaskData["TimeOut"],
                                              self.TaskData["DashboarUrl"])
         self.Output = Response

@@ -1,9 +1,8 @@
 const puppeteer = require('puppeteer');
 
-//const URL = 'https://ebam-dashboard.eu.airbus.corp/2A24/Cockpit/?mode=viewer&colorSchema=light&';
 
 
-async function testDashboard(DashboardId, Timeout, URL) {
+async function testURL(Timeout, URL) {
     let metrics;
 
     try {
@@ -13,7 +12,6 @@ async function testDashboard(DashboardId, Timeout, URL) {
         var browser = await puppeteer.launch(launchOptions);
         var page = await browser.newPage();
         await page.setViewport({ width: 1366, height: 768 });
-        console.log(DashboardId, URL);
         page.on('response', async response => {
             text3 = await response.status();
             console.log('HTTP Code : ', text3);
@@ -42,5 +40,5 @@ async function testDashboard(DashboardId, Timeout, URL) {
 
 
 module.exports = {
-    testDashboard
+    testURL
 };
