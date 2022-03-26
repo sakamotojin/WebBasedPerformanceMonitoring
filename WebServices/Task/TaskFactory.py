@@ -1,11 +1,11 @@
-from WebServices.Task.WebSitePerformanceTest import DashboardTest
+from WebServices.Task.WebSitePerformanceTest import WebSitePerformanceTest
 from WebServices.PersistanceStorage.PersistanceStorage import PersistanceStorage
 
 class TaskFactory:
     TaskReferences = {}
 
     def __init__(self):
-        TaskFactory.TaskReferences["DashboardTest"] = DashboardTest
+        TaskFactory.TaskReferences["WebSitePerformanceTest"] = WebSitePerformanceTest
         if not PersistanceStorage.getInstance().Tasks.checkTaskType(1):
             PersistanceStorage.getInstance().Tasks.addTaskType(1, "WebSitePerformanceTest", "For PerformanceTesting Of Dashboard")
 
